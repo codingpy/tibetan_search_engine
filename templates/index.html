@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>新闻搜索引擎</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div id="container" align="center">
+      <div id="header">
+        <h1>新闻搜索引擎</h1>
+        <form name="search" action="/search" method="GET">
+          <p>
+            <input type="text" name="keyword" value="{{ keyword }}">
+            <input type="submit" value="搜索">
+          </p>
+        </form>
+      </div>
+
+      <hr>
+
+      <table width="500">
+        <caption>搜索结果</caption>
+      </table>
+
+      <br>
+
+      {% for text in texts %}
+        <div class="card">
+          <div class="card-title">
+            <span class="text-id">新闻 ID {{ text.id }}</span>
+            <div class="title-div xsd">
+              <span class="text-xsd">相似度 {{ text.score }}</span>
+            </div>
+            <div class="title-div xgjz">
+              <span class="text-xgjz">共计 {{ text.size }} 个词</span>
+            </div>
+          </div>
+
+          <div class="card-text">
+            <span class="text-span">{{ text.body }}</span>
+          </div>
+        </div>
+
+        <br>
+      {% endfor %}
+
+      {% if keyword != '' and texts|length == 0 %}
+        <p>对不起，没有您搜索的网页！</p>
+      {% endif %}
+
+      <ul>
+        {% for i in pages %}
+          <a href="/search?keyword={{ keyword }}&page={{ i }}">{{ i }}</a>&nbsp;
+        {% endfor %}
+      </ul>
+
+      <div id="footer" align="center">
+        <hr>
+        &copy; 2021 洛松杨培
+      </div>
+    </div>
+  </body>
+</html>
+
+
+

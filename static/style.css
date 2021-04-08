@@ -1,0 +1,55 @@
+.card {
+  text-align: left;
+  max-height: 300px;
+  height: 100%;
+  width: 800px;
+  border: 1px solid rgb(222, 221, 224);
+  border-radius: 10px;
+}
+
+.card-title {
+  background-color: rgb(247, 247, 249);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid rgb(216, 216, 218);
+  height: 45px;
+  width: 100%;
+}
+
+.title-div {
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 6px 0 6px;
+  height: 100%;
+  display: inline;
+}
+
+.text-id {
+  padding-left: 3%;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.xgjz {
+  background-color: rgb(82, 192, 221);
+}
+
+.xsd {
+  background-color: rgb(95, 183, 91);
+}
+
+.card-text {
+  padding: 5px 0 5px 3%;
+}
+
+.text-span {
+  padding-right: 3%;
+  max-height: 220px;
+  word-break: normal;
+  width: auto;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+}

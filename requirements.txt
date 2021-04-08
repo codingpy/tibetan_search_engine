@@ -1,0 +1,11 @@
+scikit-learn
+
+botok
+
+flask
+
+redis
+
+pymysql
+
+tqdm
